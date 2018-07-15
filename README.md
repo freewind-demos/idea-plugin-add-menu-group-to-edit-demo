@@ -1,23 +1,37 @@
-Idea Plugin Hello World Demo
-=======================
+Idea Plugin Add Sub Menu Group to Edit Menu Demo
+================================================
 
-Run plugin in IDEA:
+Add sub menu group to existing `Edit` menu, like:
+
+```
+Edit
+----
+...
+...
+...
+...
+idea-plugin-add-menu-group-to-edit-demo > Popup1
+                                          Popup2
+                                          Popup3
+```
+
+The key option is `popup="true"` in `<group>` in `plugin.xml`. If it's not specified or is `false`, there will be no sub menu group, instead, it's:
+
+```
+Edit
+----
+...
+...
+...
+...
+Popup1
+Popup2
+Popup3
+```
+
+Run plugin
+----------
 
 ```
 ./gradlew runIde
 ```
-
-Build the plugin to a zip
--------------------------
-
-```
-./gradlew buildPlugin
-```
-
-It will generate the plugin file in `./build/distributions`
-
-Notice
--------
-
-- Use `version 'IC-2018.1.5'` every time to reduce download. (about 500M)
-- Don't forget to change `id` and `name` in `resources/META-INF/plugin.xml` to current project

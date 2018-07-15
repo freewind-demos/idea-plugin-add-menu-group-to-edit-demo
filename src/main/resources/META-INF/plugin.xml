@@ -1,6 +1,6 @@
 <idea-plugin>
-    <id>idea-plugin-hello-world-demo</id>
-    <name>idea-plugin-hello-world-demo</name>
+    <id>idea-plugin-add-menu-group-to-edit-demo</id>
+    <name>idea-plugin-add-menu-group-to-edit-demo</name>
     <version>1.0</version>
     <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
@@ -30,9 +30,11 @@
 
     <actions>
 
-        <group id="MyPlugin.SampleMenu" text="_Sample Menu" description="Sample menu">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="action.popup" class="actions.HelloAction" text="_Popup" description="Popup a message"/>
+        <group id="idea-plugin-add-menu-group-to-edit-demo.SampleMenu" text="_idea-plugin-add-menu-group-to-edit-demo" popup="true">
+            <add-to-group group-id="EditMenu" anchor="last"/>
+            <action id="idea-plugin-add-menu-group-to-edit-demo.popup1" class="actions.HelloAction1" text="_Popup1" description="Popup a message"/>
+            <action id="idea-plugin-add-menu-group-to-edit-demo.popup2" class="actions.HelloAction2" text="_Popup2" description="Popup a message"/>
+            <action id="idea-plugin-add-menu-group-to-edit-demo.popup3" class="actions.HelloAction3" text="_Popup3" description="Popup a message"/>
         </group>
 
     </actions>
